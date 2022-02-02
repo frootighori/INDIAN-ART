@@ -1,0 +1,1365 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Indian Arts and Curious</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- all css here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/chosen.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/ionicons.min.css">
+        <link rel="stylesheet" href="assets/css/bundle.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src = "product.js" async></script>
+        <style>
+            .enlarge {
+                transition:transform 0.25s ease;
+            }
+
+            .enlarge:hover {
+                -webkit-transform:scale(3.5); /* or some other value */
+                transform:scale(3.5);
+            }
+            #snackbar {
+                visibility: hidden;
+                min-width: 250px;
+                margin-left: -125px;
+                background-color: #d4edda;
+                color: #155724;
+                text-align: center;
+                border-radius: 2px;
+                padding: 16px;
+                position: fixed;
+                z-index: 1;
+                left: 75%;
+                bottom: 30px;
+                font-size: 17px;
+            }
+
+            #snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+
+            @-webkit-keyframes fadein {
+                from {bottom: 0; opacity: 0;} 
+                to {bottom: 30px; opacity: 1;}
+            }
+
+            @keyframes fadein {
+                from {bottom: 0; opacity: 0;}
+                to {bottom: 30px; opacity: 1;}
+            }
+
+            @-webkit-keyframes fadeout {
+                from {bottom: 30px; opacity: 1;} 
+                to {bottom: 0; opacity: 0;}
+            }
+
+            @keyframes fadeout {
+                from {bottom: 30px; opacity: 1;}
+                to {bottom: 0; opacity: 0;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header start -->
+            <header>
+                <div class="header-area transparent-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-5 col-5">
+                                <div class="language-currency">
+                                </div>
+                                <div class="sticky-logo">
+                                    <!-- <a href="index.html"><img src="assets/img/logo/2.png" alt="" /></a> -->
+                                </div>
+                                <div class="logo-small-device">
+                                    <!-- <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 d-none d-md-block">
+                                <div class="logo-menu-wrapper text-center">
+                                    <div class="logo">
+                                        <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt="" /></a> -->
+                                    </div>
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="index-2.html">home</a></li>
+                                                <li><a href="shop-grid-3-col.html">products</a></li>
+                                                <li><a href="cart.html">Enquiry Cart</a></li>
+                                                <li><a href="contact.html">contact us</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-7 col-7">
+                                <div class="header-site-icon">
+                                    <!-- <div class="header-search same-style">
+                                        <button class="sidebar-trigger-search">
+                                            <span class="ti-search"></span>
+                                        </button>
+                                    </div> -->
+                                    <div class="header-login same-style">
+                                    </div>
+                                    <div class="header-cart same-style">
+                                        <button class="sidebar-trigger">
+                                            <i class="ti-shopping-cart"></i>
+                                            <span class="count-style">0</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-area col-12">
+                                <div class="mobile-menu">
+                                    <nav id="mobile-menu-active">
+                                        <ul class="menu-overflow">
+                                            <li><a href="index-2.html">home</a></li>
+                                            <li><a href="shop-grid-3-col.html">products</a></li>
+                                            <li><a href="cart.html">Enquiry Cart</a></li>
+                                            <li><a href="contact.html">contact us</a></li>
+                                        </ul>
+                                    </nav>							
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="header-height"></div>
+            <!-- menu-style start -->
+                
+            <!-- sidebar-cart start -->
+            <div class="sidebar-cart onepage-sidebar-area">
+                <div class="wrap-sidebar">
+                    <div class="sidebar-cart-all">
+                        <div class="sidebar-cart-icon">
+                            <button class="op-sidebar-close"><span class="ti-close"></span></button>
+                        </div>
+                        <div class="cart-content">
+                            <h3>Shopping Cart</h3>
+                            <ul>
+                            </ul>
+                            <div class="cart-checkout-btn">
+                                <a class="cr-btn btn-style cart-btn-style" href="cart.html"><span>view cart</span></a>
+                                <!-- <a class="no-mrg cr-btn btn-style cart-btn-style" href="#"><span>Enquire</span></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main-search start -->
+            <div class="main-search-active">
+                <div class="sidebar-search-icon">
+                    <button class="search-close"><span class="ti-close"></span></button>
+                </div>
+                <div class="sidebar-search-input">
+                    <form>
+                        <div class="form-search">
+                            <input id="search" class="input-text" value="" placeholder="Search Entire Store" type="search">
+                            <button>
+                                <i class="ti-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="breadcrumb-area mt-37 hm-4-padding">
+                <div class="container-fluid">
+                    <div class="breadcrumb-content text-center border-top-2">
+                        <ul>
+                            <li>
+                                <a href="index-2.html">home</a>
+                            </li>
+                            <li>Products</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-area hm-4-padding">
+                <div class="container-fluid">
+                    <!-- <div class="banner-img">
+                        <a href="#"><img src="assets/img/banner/16.jpg" alt=""></a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="shop-wrapper hm-3-padding pt-35 pb-100">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="shop-topbar-wrapper">
+                                <div class="grid-list-options">
+                                    <!-- <ul class="view-mode">
+                                        <li class="active"><a href="#product-grid" data-view="product-grid"><i class="ion-grid"></i></a></li>
+                                        <li><a href="#product-list" data-view="product-list"><i class="ion-navicon"></i></a></li>
+                                    </ul> -->
+                                </div>
+                                <div class="shop-filter">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                        </div>
+                    </div>
+                    <div class="grid-list-product-wrapper">
+                        <div class="product-grid product-view">
+                            <div class="row">
+                                <div class="product-width col-md-6 col-lg-4">
+                                    <div class="product-wrapper mb-35">
+                                        <div class="product-img">
+                                            <a>
+                                                <img src="assets/img/Krishna With Flute/PXL_20210918_110407621_3.jpg" height="457" width = "378">
+                                            </a>
+                                            <div class="price-decrease">
+                                            </div>
+                                            <div class="product-action-3">
+                                                <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal5">
+                                                    <i class="ti-plus"></i> Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="product-title-wishlist">
+                                                <div class="product-title-3">
+                                                    <h4><a>Krishna With Flute</a></h4>
+                                                </div>
+                                                <div class="product-wishlist-3">
+                                                </div>
+                                            </div>
+                                            <div class="product-peice-addtocart">
+                                                <div class="product-peice-3">
+                                                    <span class="old"></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="product-addtocart">
+                                                    <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-details">
+                                            <div class="shop-list-cart">
+                                                <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="snackbar">Item added to cart</div>
+                                <div class="product-width col-md-6 col-lg-4">
+                                    <div class="product-wrapper mb-35">
+                                        <div class="product-img">
+                                            <a>
+                                                <img src="assets/img/Horse Rider/PXL_20210919_104853915_3.jpg" height="457" width = "378">
+                                            </a>
+                                            <div class="price-decrease">
+                                            </div>
+                                            <div class="product-action-3">
+                                                <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal6">
+                                                    <i class="ti-plus"></i> Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="product-title-wishlist">
+                                                <div class="product-title-3">
+                                                    <h4><a>Horse Rider</a></h4>
+                                                </div>
+                                                <div class="product-wishlist-3">
+                                                </div>
+                                            </div>
+                                            <div class="product-peice-addtocart">
+                                                <div class="product-peice-3">
+                                                    <span class="old"></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="product-addtocart">
+                                                    <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-details">
+                                            <div class="shop-list-cart">
+                                                <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-width col-md-6 col-lg-4">
+                                    <div class="product-wrapper mb-35">
+                                        <div class="product-img">
+                                            <a>
+                                                <img src="assets/img/Horse  Rider/PXL_20210919_110020567_5.jpg" height="457" width = "378">
+                                            </a>
+                                            <div class="price-decrease">
+                                            </div>
+                                            <div class="product-action-3">
+                                                <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal7">
+                                                    <i class="ti-plus"></i> Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="product-title-wishlist">
+                                                <div class="product-title-3">
+                                                    <h4><a>Horse rider</a></h4>
+                                                </div>
+                                                <div class="product-wishlist-3">
+                                                </div>
+                                            </div>
+                                            <div class="product-peice-addtocart">
+                                                <div class="product-peice-3">
+                                                    <span class="old"></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="product-addtocart">
+                                                    <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-details">
+                                            <div class="shop-list-cart">
+                                                <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-width col-md-6 col-lg-4">
+                                    <div class="product-wrapper mb-35">
+                                        <div class="product-img">
+                                            <a>
+                                                <img src="assets/img/Hindu Saint/PXL_20210919_111253620_3.jpg" height="457" width = "378">
+                                            </a>
+                                            <div class="price-decrease">
+                                            </div>
+                                            <div class="product-action-3">
+                                                <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal8">
+                                                    <i class="ti-plus"></i> Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="product-title-wishlist">
+                                                <div class="product-title-3">
+                                                    <h4><a>Hindu Saint</a></h4>
+                                                </div>
+                                                <div class="product-wishlist-3">
+                                                </div>
+                                            </div>
+                                            <div class="product-peice-addtocart">
+                                                <div class="product-peice-3">
+                                                    <span class="old"></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="product-addtocart">
+                                                    <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-details">
+                                            <div class="shop-list-cart">
+                                                <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-width col-md-6 col-lg-4">
+                                    <div class="product-wrapper mb-35">
+                                        <div class="product-img">
+                                            <a>
+                                                <img src="assets/img/Siva Mask/PXL_20210920_091823933_3.jpg" height="457" width = "378">
+                                            </a>
+                                            <div class="price-decrease">
+                                            </div>
+                                            <div class="product-action-3">
+                                                <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal9">
+                                                    <i class="ti-plus"></i> Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="product-title-wishlist">
+                                                <div class="product-title-3">
+                                                    <h4><a>Siva Mask</a></h4>
+                                                </div>
+                                                <div class="product-wishlist-3">
+                                                </div>
+                                            </div>
+                                            <div class="product-peice-addtocart">
+                                                <div class="product-peice-3">
+                                                    <span class="old"></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="product-addtocart">
+                                                    <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-details">
+                                            <div class="shop-list-cart">
+                                                <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="product-width col-md-6 col-lg-4">
+                                    <div class="product-wrapper mb-35">
+                                        <div class="product-img">
+                                            <a>
+                                                <img src="assets/img/Subramanian/PXL_20210918_104757143_3.jpg" height="457" width = "378">
+                                            </a>
+                                            <div class="price-decrease">
+                                            </div>
+                                            <div class="product-action-3">
+                                                <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal4">
+                                                    <i class="ti-plus"></i> Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="product-title-wishlist">
+                                                <div class="product-title-3">
+                                                    <h4><a>Subramanian</a></h4>
+                                                </div>
+                                                <div class="product-wishlist-3">
+                                                </div>
+                                            </div>
+                                            <div class="product-peice-addtocart">
+                                                <div class="product-peice-3">
+                                                    <span class="old"></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="product-addtocart">
+                                                    <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-list-details">
+                                            <div class="shop-list-cart">
+                                                <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="pagination-style text-center mt-30">
+                                <ul>
+                                    <li>
+                                        <a href="shop-grid-3-col.html">1</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="product.js">2</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="#">3</a>
+                                    </li> -->
+                                    <!-- <li>
+                                        <a href="#">
+                                            <i class="ion-chevron-right"></i>
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="theme-bg footer-padding">
+                <div class="container-fluid">
+                    <div class="footer-top pt-85 pb-25">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-5">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-widget-title">
+                                        <h3>Get in Touch</h3>
+                                    </div>
+                                    <div class="food-info-wrapper">
+                                        <div class="food-address">
+                                            <div class="food-info-icon">
+                                                <i class="ion-ios-home-outline"></i>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p>6/189, Jew Town  <br>Kochi-682002</p>
+                                            </div>
+                                        </div>
+                                        <div class="food-address">
+                                            <div class="food-info-icon">
+                                                <i class="ion-ios-telephone-outline"></i>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p>+91 8075336002</p>
+                                            </div>
+                                        </div>
+                                        <div class="food-address">
+                                            <div class="food-info-icon">
+                                                <i class="ion-ios-email-outline"></i>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p><a href="mailto:indianartsandcurious@gmail.com">indianartsandcurious@gmail.com</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-widget-title">
+                                        <h3>Social Media</h3>
+                                    </div>
+                                    <div class="twitter-info-wrapper">
+                                        <div class="single-twitter">
+                                            <div class="twitter-icon">
+                                                <i class="ion-social-facebook"></i>
+                                            </div>
+                                            <div class="twitter-content">
+                                                <p><a href="https://www.facebook.com/Indian-Arts-and-Curious-102593152194225"> Indian Arts and Curious </a></p>
+                                            </div>
+                                        </div>
+                                        <div class="single-twitter">
+                                            <div class="twitter-icon">
+                                                <i class="ion-social-instagram"></i>
+                                            </div>
+                                            <div class="twitter-content">
+                                                <p><a href="https://instagram.com/indian_arts_and_curious?utm_medium=copy_link"> indian_arts_and_curious </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom border-top-1 ptb-15">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="copyright-payment">
+                                    <div class="copyright">
+                                        <p>Copyright ©  2021 <a>Indian Arts and Curious</a> All RIght Reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <!-- <div class="footer-payment-method">
+                                    <a href="#"><img alt="" src="assets/img/icon-img/7.png"></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+             <!-- modal 1 -->
+             <div class="modal fade" id="exampleModal1" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Nandi/100001-Nandi-Dimension-Length-38cm.Height-37cm.Breadth-17cm.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Nandi/PXL_20210917_104215835_3.jpg">
+                                        <img src="assets/img/Nandi/PXL_20210917_104215835_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="#modal2" data-toggle="tab">
+                                        <img src="assets/img/quick-view/s5.jpg" alt="">
+                                    </a>
+                                    <a href="#modal3" data-toggle="tab">
+                                        <img src="assets/img/quick-view/s6.jpg" alt="">
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Nandi</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100001</p>
+                                    <p>Dimensions: Height-37cm Breadth-17cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 2 -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Ganesh/PXL_20210918_101920200_2.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Ganesh/PXL_20210918_101801202_3.jpg">
+                                        <img src="assets/img/Ganesh/PXL_20210918_101801202_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Ganesh/PXL_20210918_101815474_3.jpg" >
+                                        <img src="assets/img/Ganesh/PXL_20210918_101815474_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="#modal3" data-toggle="tab">
+                                        <img src="assets/img/quick-view/s6.jpg" alt="">
+                                    </a> --> 
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Ganesh</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100002</p>
+                                    <p>Dimensions: Height-30cm Length-18cm Depth-7cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 3 -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Krishna and Mother/PXL_20210918_103239336_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Krishna and Mother/PXL_20210918_103346231_3.jpg">
+                                        <img src="assets/img/Krishna and Mother/PXL_20210918_103346231_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Krishna and Mother/PXL_20210918_103402975_3.jpg" >
+                                        <img src="assets/img/Krishna and Mother/PXL_20210918_103402975_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="#modal3" data-toggle="tab">
+                                        <img src="assets/img/quick-view/s6.jpg" alt="">
+                                    </a> --> 
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Krishna and Mother</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100003</p>
+                                    <p>Dimensions: Height-27cm Length-16cm Depth-5cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 3 -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Krishna and Mother/PXL_20210918_103239336_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Krishna and Mother/PXL_20210918_103346231_3.jpg">
+                                        <img src="assets/img/Krishna and Mother/PXL_20210918_103346231_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Krishna and Mother/PXL_20210918_103402975_3.jpg" >
+                                        <img src="assets/img/Krishna and Mother/PXL_20210918_103402975_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="#modal3" data-toggle="tab">
+                                        <img src="assets/img/quick-view/s6.jpg" alt="">
+                                    </a> --> 
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Subramanian</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100004</p>
+                                    <p>Dimensions: Height-24cm Length-16cm Depth-5cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 4 -->
+            <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Subramanian/PXL_20210918_104757143_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Subramanian/PXL_20210918_104827137_3.jpg">
+                                        <img src="assets/img/Subramanian/PXL_20210918_104827137_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Subramanian/PXL_20210918_104850790_3.jpg" >
+                                        <img src="assets/img/Subramanian/PXL_20210918_104850790_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Subramanian/PXL_20210918_104943365_2.jpg">
+                                        <img src="assets/img/Subramanian/PXL_20210918_104943365_2.jpg" height = "150" class="enlarge" width = "100">
+                                    </a> 
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Subramanian</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100004</p>
+                                    <p>Dimensions: Height-24cm Length-16cm Depth-5cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 5 -->
+            <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Krishna With Flute/PXL_20210918_110407621_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Krishna With Flute/PXL_20210918_110451556_3.jpg">
+                                        <img src="assets/img/Krishna With Flute/PXL_20210918_110451556_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Krishna With Flute/PXL_20210918_110513114_3.jpg" >
+                                        <img src="assets/img/Krishna With Flute/PXL_20210918_110513114_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Krishna With Flute/PXL_20210918_110620664_3.jpg">
+                                        <img src="assets/img/Krishna With Flute/PXL_20210918_110620664_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a> 
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Krishna With Flute</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100005</p>
+                                    <p>Dimensions: Height-40cm Length-14cm Depth-9cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 6 -->
+            <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Horse Rider/PXL_20210919_104608154_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Horse Rider/PXL_20210919_104706331_3.jpg">
+                                        <img src="assets/img/Horse Rider/PXL_20210919_104706331_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Horse Rider/PXL_20210919_104756084_3.jpg" >
+                                        <img src="assets/img/Horse Rider/PXL_20210919_104756084_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Horse Rider/PXL_20210919_104853915_3.jpg" >
+                                        <img src="assets/img/Horse Rider/PXL_20210919_104853915_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Horse Rider</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100006</p>
+                                    <p>Dimensions: Height-23cm Length-16cm Breadth-7cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 7 -->
+            <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Horse  Rider/PXL_20210919_110020567_5.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Horse  Rider/PXL_20210919_110130480_3.jpg">
+                                        <img src="assets/img/Horse  Rider/PXL_20210919_110130480_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Horse  Rider/PXL_20210919_110202016_3.jpg" >
+                                        <img src="assets/img/Horse  Rider/PXL_20210919_110202016_3.jpg"  height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" >
+                                        <img src="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Horse  rider</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100007</p>
+                                    <p>Dimensions: Height-18cm Length-15cm Breadth-7cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 8 -->
+            <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Hindu Saint/PXL_20210919_111253620_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Hindu Saint/PXL_20210919_111335319_3.jpg">
+                                        <img src="assets/img/Hindu Saint/PXL_20210919_111335319_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Hindu Saint/PXL_20210919_111357677_3.jpg" >
+                                        <img src="assets/img/Hindu Saint/PXL_20210919_111357677_3.jpg"  height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" >
+                                        <img src="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Hindu Saint</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100008</p>
+                                    <p>Dimensions: Height-12cm Length-10cm Breadth-8cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 9 -->
+            <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Siva Mask/PXL_20210920_091823933_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Siva Mask/PXL_20210920_091930906_3.jpg">
+                                        <img src="assets/img/Siva Mask/PXL_20210920_091930906_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Siva Mask/PXL_20210920_091944678_3.jpg" >
+                                        <img src="assets/img/Siva Mask/PXL_20210920_091944678_3.jpg"  height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" >
+                                        <img src="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Siva Mask</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100009</p>
+                                    <p>Dimensions: Height-42cm Length-17cm Depth-8cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 10 -->
+            <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Standing Krishna/PXL_20210920_095801869_3.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Standing Krishna/PXL_20210920_095858198.MP_3.jpg">
+                                        <img src="assets/img/Standing Krishna/PXL_20210920_095858198.MP_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Standing Krishna/PXL_20210920_095918598.MP_3.jpg" >
+                                        <img src="assets/img/Standing Krishna/PXL_20210920_095918598.MP_3.jpg"   height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <!-- <a href="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" >
+                                        <img src="assets/img/Horse  Rider/PXL_20210919_110251661_3.jpg" height = "150" class="enlarge" width = "100">
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Standing Krishna</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100010</p>
+                                    <p>Dimensions: Height-57cm Length-20cm Depth-9cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <!-- modal 11 -->
+            <div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ion-android-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="assets/img/Christian Figure/1.jpg" height = "380" width = "320">
+                                        </div>
+                                    </div>```
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="assets/img/Christian Figure/2.jpg">
+                                        <img src="assets/img/Christian Figure/2.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                    <a href="assets/img/Christian Figure/3.jpg" >
+                                        <img src="assets/img/Christian Figure/3.jpg"   height = "150" class="enlarge" width = "100" >
+                                    </a>
+                                    <a href="assets/img/Christian Figure/4.jpg" >
+                                        <img src="assets/img/Christian Figure/4.jpg" height = "150" class="enlarge" width = "100">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Christian Figure</h3>
+                                    <div class="price">
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                        </div>
+                                    </div>
+                                    <p>ID: 100011</p>
+                                    <p>Dimensions: Height-75cm Length-27cm Depth-20cm</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                        </div>
+                                        <div class="select-option-part">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div>
+                                    <!-- Sold out code
+                                    <div class="quickview-plus-minus" ">
+                                            <a class="btn-style " style="background-color: grey;"><span>Item Sold Out</span></a>
+                                        <div class="quickview-btn-wishlist">
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+        </div>
+        
+        
+        
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- all js here -->
+        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/ajax-mail.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
